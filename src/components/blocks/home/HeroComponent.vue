@@ -13,6 +13,7 @@
         </p>
         <div class="flex gap-5 justify-center xl:justify-start">
           <ButtonComponent
+              class="hidden sm:flex"
               variant="primary"
               href="#installation"
               :left-icon="DownloadIcon"
