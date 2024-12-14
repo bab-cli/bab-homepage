@@ -23,7 +23,7 @@
           class="animate-blink font-sans select-none">▋</span>
       </div>
       <div v-if="displayedResponse" class="font-mono text-white">
-        <pre class="select-none font-mono" v-html="displayedResponse"></pre>
+        <pre class=" font-mono" v-html="displayedResponse"></pre>
       </div>
     </div>
 
