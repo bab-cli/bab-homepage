@@ -1,17 +1,66 @@
 <template>
-  <div v-if="isVisible" class="fixed bottom-0 left-1/2 transform -translate-x-1/2 mb-4 z-50">
-    <div class="bg-[#4F39F6] px-3 py-2 text-white rounded-lg shadow-lg flex items-center gap-4 w-full">
-      <div class="flex-1 flex items-center gap-2">
-        <p class="font-semibold text-sm">{{ title }}</p>
-        <span>
-          <svg viewBox="0 0 12 12" aria-hidden="true" class="w-2.5 h-2.5">
+  <div
+      v-if="isVisible"
+      class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4"
+  >
+    <div class="
+      bg-[#4F39F6]
+      px-3.5
+      py-2
+      text-white
+      rounded-lg
+      shadow-lg
+      flex
+      items-center
+      gap-2
+      sm:gap-4
+      max-w-min
+      mx-auto
+      relative
+    ">
+      <div class="flex-1 flex items-center gap-2 overflow-hidden">
+        <p class="
+          font-semibold
+          text-xs
+          sm:text-sm
+          whitespace-nowrap
+          overflow-hidden
+          text-ellipsis
+        ">
+          {{ title }}
+        </p>
+        <span class="flex-shrink-0">
+          <svg viewBox="0 0 12 12" aria-hidden="true" class="w-2 sm:w-2.5 h-2 sm:h-2.5">
             <circle r="2" cx="6" cy="6" fill="white"></circle>
           </svg>
         </span>
-        <p class="text-sm text-ellipsis overflow-hidden">{{ message }}</p>
+        <p class="
+          text-xs
+          sm:text-sm
+          overflow-hidden
+          text-ellipsis
+          whitespace-nowrap
+        ">
+          {{ message }}
+        </p>
       </div>
-      <button @click="close" class="text-white font-semibold focus:outline-none">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+      <button
+          @click="close"
+          class="
+          text-white
+          font-semibold
+          focus:outline-none
+
+          top-1/2
+          right-2
+        "
+      >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            class="w-4 h-4 sm:w-5 sm:h-5"
+        >
           <path d="M6.28 5.22a.75.75 0 0 0-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 1 0 1.06 1.06L10 11.06l3.72 3.72a.75.75 0 1 0 1.06-1.06L11.06 10l3.72-3.72a.75.75 0 0 0-1.06-1.06L10 8.94 6.28 5.22Z"></path>
         </svg>
       </button>
