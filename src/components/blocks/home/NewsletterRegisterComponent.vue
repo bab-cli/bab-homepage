@@ -71,7 +71,7 @@ export default {
   methods: {
     subscribe() {
       if (this.email) {
-        alert(`Subscribed with email: ${this.email}`);
+        alert(`Coming Soon`);
         this.email = '';
       } else {
         alert('Coming Soon');
