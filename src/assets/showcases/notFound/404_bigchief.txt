@@ -1,0 +1,11 @@
+bab "404" --font "bigchief"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+____________________________
+               __           
+   /    /    /    )  /    / 
+--/____/----/----/--/____/--
+      /    /    /       /   
+_____/____(____/_______/____
+                            
+                            </span>
+</div>

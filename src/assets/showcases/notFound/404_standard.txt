@@ -1,0 +1,9 @@
+bab "404" --font "standard"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+ _  _    ___  _  _   
+| || |  / _ \| || |  
+| || |_| | | | || |_ 
+|__   _| |_| |__   _|
+   |_|  \___/   |_|  
+                     </span>
+</div>

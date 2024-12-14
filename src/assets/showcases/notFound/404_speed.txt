@@ -1,0 +1,9 @@
+bab "404" --font "speed"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+_____ _____________ __
+__  // /_  __ \_  // /
+_  // /_  / / /  // /_
+/__  __/ /_/ //__  __/
+  /_/  \____/   /_/   
+                      </span>
+</div>

@@ -1,0 +1,10 @@
+bab "404" --font "tinker-toy"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+o  o  o-o  o  o 
+|  | o  /o |  | 
+o--O | / | o--O 
+   | o/  o    | 
+   o  o-o     o 
+                
+                </span>
+</div>

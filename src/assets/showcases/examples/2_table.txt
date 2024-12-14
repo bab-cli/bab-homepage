@@ -1,0 +1,7 @@
+bab --table -c "ID,Name" -r "1,Alice; 2,Bob"
+    +----+-------+
+    | ID | Name  |
+    +----+-------+
+    |  1 | Alice |
+    |  2 | Bob   |
+    +----+-------+

@@ -1,0 +1,51 @@
+bab "Welcome to BAB CLI" --translate all
+<table style="width: 100%; text-align: left; border-collapse: collapse;">
+  <tr>
+    <td style="color: grey;">English:</td>
+    <td>Welcome to BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Japanese:</td>
+    <td>BAB CLI へようこそ</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Spanish:</td>
+    <td>Bienvenido a BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">French:</td>
+    <td>Bienvenue sur BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">German:</td>
+    <td>Willkommen bei BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Italian:</td>
+    <td>Benvenuto su BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Portuguese:</td>
+    <td>Bem-vindo ao BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Russian:</td>
+    <td>Добро пожаловать в BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Chinese (Simplified):</td>
+    <td>欢迎来到BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Arabic:</td>
+    <td>مرحبا بكم في BAB CLI</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Hindi:</td>
+    <td>BAB CLI में स्वागत है</td>
+  </tr>
+  <tr>
+    <td style="color: grey;">Korean:</td>
+    <td>BAB CLI에 오신 것을 환영합니다</td>
+  </tr>
+</table>

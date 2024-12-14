@@ -1,0 +1,8 @@
+bab "Hey, check out the GitHub" --style cat
+      ___________________________
+     < Hey, check out the GitHub >
+      ---------------------------
+              \<span style="color: #aa65f7;">   ╱|、
+                 (˚ˎ 。7
+                  |、˜〵
+                  じしˍ,)ノ</span>

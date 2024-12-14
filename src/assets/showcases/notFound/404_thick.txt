@@ -1,0 +1,8 @@
+bab "404" --font "thick"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+  d8 .d88b.   d8 
+ dP8 8P  Y8  dP8 
+dPw8 8b  d8 dPw8 
+   8 `Y88P'    8 
+                 </span>
+</div>

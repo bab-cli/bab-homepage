@@ -1,0 +1,12 @@
+bab "404" --font "larry3d"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+ __ __       __   __ __      
+/\ \\ \    /'__`\/\ \\ \     
+\ \ \\ \  /\ \/\ \ \ \\ \    
+ \ \ \\ \_\ \ \ \ \ \ \\ \_  
+  \ \__ ,__\ \ \_\ \ \__ ,__\
+   \/_/\_\_/\ \____/\/_/\_\_/
+      \/_/   \/___/    \/_/  
+                             
+                             </span>
+</div>

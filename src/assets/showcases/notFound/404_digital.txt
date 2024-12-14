@@ -1,0 +1,6 @@
+bab "404" --font "digital"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
++-+-+-+
+|4|0|4|
++-+-+-+</span>
+</div>

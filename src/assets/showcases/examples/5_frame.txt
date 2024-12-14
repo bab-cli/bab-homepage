@@ -1,0 +1,4 @@
+bab "WOW! That was easy" --decoration Frame
+    ┌--------------------┐
+    │ WOW! That was easy │
+    └--------------------┘

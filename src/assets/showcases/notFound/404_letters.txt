@@ -1,0 +1,9 @@
+bab "404" --font "letters"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+    44    00000      44   
+   444   00   00    444   
+ 44  4   00   00  44  4   
+44444444 00   00 44444444 
+   444    00000     444   
+                          </span>
+</div>

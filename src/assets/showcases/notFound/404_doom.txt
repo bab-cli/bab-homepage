@@ -1,0 +1,11 @@
+bab "404" --font "doom"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+   ___ _____    ___ 
+  /   |  _  |  /   |
+ / /| | |/' | / /| |
+/ /_| |  /| |/ /_| |
+\___  \ |_/ /\___  |
+    |_/\___/     |_/
+                    
+                    </span>
+</div>

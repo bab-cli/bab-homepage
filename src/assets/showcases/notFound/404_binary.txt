@@ -1,0 +1,4 @@
+bab "404" --font "binary"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+00110100 00110000 00110100 </span>
+</div>

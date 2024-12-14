@@ -1,0 +1,7 @@
+bab "404" --font "bubble"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+  _   _   _  
+ / \ / \ / \ 
+( 4 | 0 | 4 )
+ \_/ \_/ \_/ </span>
+</div>

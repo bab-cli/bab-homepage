@@ -1,0 +1,8 @@
+bab "404" --font "thin"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+|  |,--.|  |
+`--||  |`--|
+   ||  |   |
+   ``--'   `
+            </span>
+</div>

@@ -1,0 +1,7 @@
+bab "404" --font "smkeyboard"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+ ____ ____ ____ 
+||4 |||0 |||4 ||
+||__|||__|||__||
+|/__\|/__\|/__\|</span>
+</div>

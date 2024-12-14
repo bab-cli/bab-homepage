@@ -1,0 +1,9 @@
+bab "404" --font "o8"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+      o88     ooooooo         o88   
+    o8888   o888  o888o     o8888   
+  o88 888   888  8  888   o88 888   
+o888oo888oo 888o8  o888 o888oo888oo 
+     o888o    88ooo88        o888o  
+                                    </span>
+</div>

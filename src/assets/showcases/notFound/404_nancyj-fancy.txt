@@ -1,0 +1,11 @@
+bab "404" --font "nancyj-fancy"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+dP   dP  a8888a  dP   dP 
+88   88 d8' ..8b 88   88 
+88aaa88 88 .P 88 88aaa88 
+     88 88 d' 88      88 
+     88 Y8'' .8P      88 
+     dP  Y8888P       dP 
+                         
+                         </span>
+</div>

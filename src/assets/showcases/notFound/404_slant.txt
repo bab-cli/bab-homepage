@@ -1,0 +1,9 @@
+bab "404" --font "slant"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+   __ __  ____  __ __
+  / // / / __ \/ // /
+ / // /_/ / / / // /_
+/__  __/ /_/ /__  __/
+  /_/  \____/  /_/   
+                     </span>
+</div>

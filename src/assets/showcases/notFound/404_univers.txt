@@ -1,0 +1,13 @@
+bab "404" --font "univers"
+<div style="text-align: center; font-family: monospace;"><span class="text-center" style="color: #9e3636;">
+        ,d8      ,a8888a,            ,d8    
+      ,d888    ,8P"'  `"Y8,        ,d888    
+    ,d8" 88   ,8P        Y8,     ,d8" 88    
+  ,d8"   88   88          88   ,d8"   88    
+,d8"     88   88          88 ,d8"     88    
+8888888888888 `8b        d8' 8888888888888  
+         88    `8ba,  ,ad8'           88    
+         88      "Y8888P"             88    
+                                            
+                                            </span>
+</div>

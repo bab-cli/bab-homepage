@@ -1,0 +1,8 @@
+bab "Nooooooooooo" --style wave
+  N
+    o             o  o
+      o        o        o             o  o
+         o  o             o        o        o             o  o
+                             o  o             o        o        o            o
+                                                 o  o             o        o
+                                                                     o  o
