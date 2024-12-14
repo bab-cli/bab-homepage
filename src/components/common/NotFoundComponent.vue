@@ -28,6 +28,12 @@
       >
         Discord
       </a>
+      <a
+          href="https://github.bab.sh"
+          class="text-sm underline text-gray-600 hover:text-white font-medium transition-all duration-300"
+      >
+        GitHub
+      </a>
     </div>
   </div>
 </template>
