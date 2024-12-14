@@ -12,6 +12,8 @@
   <section id="installation" class="hidden py-5 sm:block bg-[#111418] border-t-[2px] border-gray-800">
     <InstallComponent/>
   </section>
+
+
   <section class="border-t-[2px] py-40 border-gray-800">
     <FeatureCardComponent/>
 
@@ -24,7 +26,9 @@
     <TeamComponent/>
 
   </section>
-
+  <section class="border-b-[2px] border-gray-800">
+    <NewsletterRegisterComponent/>
+  </section>
 
 
 
@@ -42,6 +46,6 @@ import StatisticComponent from "@/components/blocks/home/StatisticComponent.vue"
 import InstallComponent from "@/components/blocks/home/InstallComponent.vue";
 import PluginStoreHeroComponent from "@/components/blocks/home/PluginStoreHeroComponent.vue";
 import TeamComponent from "@/components/blocks/home/TeamComponent.vue";
-import OurPartnersComponent from "@/components/blocks/home/OurPartnersComponent.vue";
+import NewsletterRegisterComponent from "@/components/blocks/home/NewsletterRegisterComponent.vue";
 
 </script>
