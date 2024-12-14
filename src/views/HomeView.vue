@@ -1,4 +1,5 @@
 <template>
+  <ChipMessageComponent message="This is the Beginning of Bab.sh." title="Pre Alpha v0.1"/>
   <section class="xl:h-screen pt-[17vh] sm:pt-[15vh] xl:pt-[30vh]" id="hero">
     <HeroComponent/>
 
@@ -47,5 +48,6 @@ import InstallComponent from "@/components/blocks/home/InstallComponent.vue";
 import PluginStoreHeroComponent from "@/components/blocks/home/PluginStoreHeroComponent.vue";
 import TeamComponent from "@/components/blocks/home/TeamComponent.vue";
 import NewsletterRegisterComponent from "@/components/blocks/home/NewsletterRegisterComponent.vue";
+import ChipMessageComponent from "@/components/common/ChipMessageComponent.vue";
 
 </script>
