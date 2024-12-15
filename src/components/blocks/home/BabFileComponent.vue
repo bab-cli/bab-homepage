@@ -1,9 +1,9 @@
 <template>
   <div class="relative bg-[#121418]">
-  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-10 sm:px-20">
     <div class="grid py-40 lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-6 lg:pr-12">
-        <h1 class="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        <h1 class="text-5xl font-bold tracking-tight text-white">
           Create Your Custom .bab Files
         </h1>
         <p class="mt-4 text-lg leading-8 text-gray-300">
@@ -61,7 +61,7 @@
                 </div>
               </div>
             </div>
-            <pre class="select-none p-8 pt-2 text-sm text-white overflow-auto max-w-full h-[calc(100%-50px)] whitespace-pre-wrap">
+            <pre class="select-none p-8 pt-2 text-sm text-white overflow-hidden max-w-full h-[calc(100%-50px)] whitespace-pre-wrap">
   <code v-html="files[activeTab].content"></code>
 </pre>
 
