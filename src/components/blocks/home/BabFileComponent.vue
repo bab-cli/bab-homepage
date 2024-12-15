@@ -4,7 +4,9 @@
     <div class="grid py-40 lg:grid-cols-2 gap-12 items-center">
       <div class="space-y-6 lg:pr-12">
         <h1 class="text-5xl font-bold tracking-tight text-white">
-          Create Your Custom .bab Files
+          Create Your Custom <span class="font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent leading-tight">
+          .bab
+        </span> Files
         </h1>
         <p class="mt-4 text-lg leading-8 text-gray-300">
           No coding required! Create stunning text tranformator plugins using .bab files.
