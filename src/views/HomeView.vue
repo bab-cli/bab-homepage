@@ -19,7 +19,10 @@
     <FeatureCardComponent/>
 
   </section>
+  <section class="border-t-[2px] border-gray-800">
+    <BabFileComponent/>
 
+  </section>
   <section class="border-t-[2px] border-gray-800">
     <PluginStoreHeroComponent/>
   </section>
@@ -49,5 +52,5 @@ import PluginStoreHeroComponent from "@/components/blocks/home/PluginStoreHeroCo
 import TeamComponent from "@/components/blocks/home/TeamComponent.vue";
 import NewsletterRegisterComponent from "@/components/blocks/home/NewsletterRegisterComponent.vue";
 import ChipMessageComponent from "@/components/common/ChipMessageComponent.vue";
-
+import BabFileComponent from "@/components/blocks/home/BabFileComponent.vue"
 </script>
