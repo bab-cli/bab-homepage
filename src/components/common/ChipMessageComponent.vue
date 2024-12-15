@@ -3,21 +3,25 @@
       v-if="isVisible"
       class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4"
   >
-    <div class="
-      bg-[#4F39F6]
-      px-3.5
-      py-2
-      text-white
-      rounded-lg
-      shadow-lg
-      flex
-      items-center
-      gap-2
-      sm:gap-4
-      max-w-min
-      mx-auto
-      relative
-    ">
+    <div
+        class="
+        notification
+        bg-[#4F39F6]
+        px-3.5
+        py-2
+        text-white
+        rounded-lg
+        shadow-lg
+        flex
+        items-center
+        gap-2
+        sm:gap-4
+        max-w-min
+        mx-auto
+        relative
+        animate-slide-up
+      "
+    >
       <div class="flex-1 flex items-center gap-2 overflow-hidden">
         <p class="
           font-semibold
@@ -50,9 +54,11 @@
           text-white
           font-semibold
           focus:outline-none
-
           top-1/2
           right-2
+          transition-transform
+          transform
+          hover:scale-110
         "
       >
         <svg
@@ -123,3 +129,36 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.notification {
+  animation: slide-up 0.5s ease-out, fade-in 0.5s ease-out;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.notification-exit {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+</style>
