@@ -1,8 +1,11 @@
 <template>
   <div class="relative bg-[#121418]">
-  <div class="mx-auto max-w-7xl px-10 sm:px-20">
-    <div class="grid py-40 lg:grid-cols-2 gap-12 items-center">
-      <div class="space-y-6 lg:pr-12">
+
+    <div class="mx-auto max-w-7xl px-10 sm:px-20">
+
+      <div class="grid py-40 lg:grid-cols-2 gap-12 items-center">
+
+        <div class="space-y-6 lg:pr-12">
         <h1 class="text-5xl font-bold tracking-tight text-white">
           Create Your Custom <span class="font-bold bg-gradient-to-r from-primary-400 to-accent-400 bg-clip-text text-transparent leading-tight">
           .bab
@@ -37,13 +40,14 @@
           </div>
         </div>
       </div>
-        <div class="relative lg:absolute lg:right-0 lg:top-[15%] lg:bottom-0 lg:w-1/2 xl:pl-20 mt-10 lg:mt-0">
-          <div class="bg-gray-900 lg:rounded-none lg:rounded-tl-lg rounded-lg shadow-xl overflow-hidden lg:h-full">
-            <div class="bg-gray-800 flex items-center">
-              <div class="px-4 py-3 flex space-x-1.5">
-                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
-                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+
+      <div class="relative  lg:absolute lg:right-0 lg:top-[15%] lg:bottom-0 lg:w-1/2 xl:pl-20 mt-10 lg:mt-0">
+          <div class="bg-[#111828] code-editor lg:rounded-none lg:rounded-tl-lg rounded-lg shadow-xl overflow-hidden lg:h-full">
+            <div class="bg-gray-800 border-b border-gray-700 flex items-center">
+              <div class="px-4 py-3 flex space-x-2">
+                  <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                  <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                  <div class="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
               <div class="flex-1">
                 <div class="flex">
@@ -62,12 +66,15 @@
                   </button>
                 </div>
               </div>
+
             </div>
             <pre class="select-none p-8 pt-2 text-sm text-white overflow-hidden max-w-full h-[calc(100%-50px)] whitespace-pre-wrap">
   <code v-html="files[activeTab].content"></code>
 </pre>
 
           </div>
+
+
         </div>
       </div>
     </div>
@@ -75,8 +82,10 @@
 </template>
 
 <script>
+
 export default {
   name: 'FeatureHero',
+  components: {},
   data() {
     return {
       activeTab: 0,
@@ -146,3 +155,13 @@ export default {
   }
 }
 </script>
+
+<style>
+.code-editor {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-container .text-green-400 {
+  color: #32cd32;
+}
+</style>
