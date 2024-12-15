@@ -1,6 +1,5 @@
 <template>
   <div class="glass-container min-w-full sm:min-w-[520px] max-w-[520px] h-[300px] rounded-lg overflow-hidden">
-
     <div class="flex items-center bg-gray-800 p-4 pb-2 pt-2 border-b border-gray-700">
       <div class="flex space-x-2 mr-auto">
         <div class="w-3 h-3 bg-red-500 rounded-full"></div>
@@ -8,16 +7,14 @@
         <div class="w-3 h-3 bg-green-500 rounded-full"></div>
       </div>
       <div class="text-gray-300 text-sm flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24"
-             stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
         Examples
       </div>
     </div>
 
-    <div class="p-4 text-green-400 text-left font-mono text-sm ">
+    <div class="p-4 text-green-400 text-left font-mono text-sm">
       <div class="mb-2">
         <span class="text-gray-500 font-mono select-none">$ </span>{{ displayedCommand }}<span
           class="animate-blink font-sans select-none">▋</span>
@@ -26,12 +23,11 @@
         <pre class="select-none font-mono" v-html="displayedResponse"></pre>
       </div>
     </div>
-
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
+import { ref, onMounted, computed } from 'vue'
 
 const props = defineProps({
   typingSpeed: {
@@ -42,11 +38,7 @@ const props = defineProps({
     type: Number,
     default: 1000
   },
-  showCursor: {
-    type: Boolean,
-    default: true
-  },
-  commandsFolder:{
+  commandsFolder: {
     type: String,
     default: 'examples'
   },
@@ -60,8 +52,11 @@ const props = defineProps({
   }
 })
 
+const commandCache = new Map()
+
 const displayedCommand = ref('')
 const displayedResponse = ref('')
+const isLoading = ref(true)
 
 const parseColorCodes = (text) => {
   return text.replace(/\{\{color:\s*(\w+)\}\}(.*?)\{\{\/color\}\}/g, (match, color, content) => {
@@ -70,31 +65,44 @@ const parseColorCodes = (text) => {
 }
 
 const loadCommandsFromFiles = async () => {
+  if (commandCache.has(props.commandsFolder)) {
+    return commandCache.get(props.commandsFolder);
+  }
+
   const commands = [];
 
   const commandFolders = {
-    notFound: import.meta.glob('@/assets/showcases/notFound/*.txt'),
-    examples: import.meta.glob('@/assets/showcases/examples/*.txt')
+    notFound: import.meta.glob('@/assets/showcases/notFound/*.txt', { eager: false }),
+    examples: import.meta.glob('@/assets/showcases/examples/*.txt', { eager: false })
   }
 
-  const commandFiles = commandFolders[props.commandsFolder] || commandFolders['defaultCommands'];
+  const commandFiles = commandFolders[props.commandsFolder] || commandFolders['examples'];
 
-  for (const path in commandFiles) {
-    const module = await commandFiles[path]();
-    const text = await fetch(module.default).then(response => response.text());
-    const [command, ...responseLines] = text.split('\n');
-    const response = parseColorCodes(responseLines.join('\n'));
-    commands.push({ command: command.trim(), response });
-  }
+  const commandPromises = Object.keys(commandFiles).map(async (path) => {
+    try {
+      const module = await commandFiles[path]();
+      const text = await fetch(module.default).then(response => response.text());
+      const [command, ...responseLines] = text.split('\n');
+      const response = parseColorCodes(responseLines.join('\n'));
+      return { command: command.trim(), response };
+    } catch (error) {
+      console.error(`Error loading command from ${path}:`, error);
+      return null;
+    }
+  });
+
+  const loadedCommands = (await Promise.all(commandPromises)).filter(cmd => cmd !== null);
 
   if (props.random) {
-    for (let i = commands.length - 1; i > 0; i--) {
+    for (let i = loadedCommands.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [commands[i], commands[j]] = [commands[j], commands[i]];
+      [loadedCommands[i], loadedCommands[j]] = [loadedCommands[j], loadedCommands[i]];
     }
   }
 
-  return commands;
+  commandCache.set(props.commandsFolder, loadedCommands);
+
+  return loadedCommands;
 }
 
 const animateCommand = async (command, response) => {
@@ -121,29 +129,42 @@ const animateCommand = async (command, response) => {
 }
 
 const startCommandLoop = async () => {
-  const commands = await loadCommandsFromFiles()
+  try {
+    isLoading.value = true;
+    const commands = await loadCommandsFromFiles();
 
-  if (props.loop) {
-    while (true) {
-      for (const {command, response} of commands) {
-        await animateCommand(command, response)
-        await new Promise(resolve => setTimeout(resolve, props.pauseBetweenCommands))
+    if (props.loop) {
+      while (true) {
+        for (const {command, response} of commands) {
+          await animateCommand(command, response);
+          await new Promise(resolve => setTimeout(resolve, props.pauseBetweenCommands));
+        }
+      }
+    } else {
+      if (commands.length > 0) {
+        const { command, response } = commands[0];
+        await animateCommand(command, response);
       }
     }
-  } else {
-    if (commands.length > 0) {
-      const { command, response } = commands[0];
-      await animateCommand(command, response);
-    }
+  } catch (error) {
+    console.error('Error in command loop:', error);
+  } finally {
+    isLoading.value = false;
   }
 }
 
 onMounted(() => {
-  startCommandLoop()
+  if ('requestIdleCallback' in window) {
+    window.requestIdleCallback(() => {
+      startCommandLoop();
+    });
+  } else {
+    setTimeout(startCommandLoop, 0);
+  }
 })
 </script>
 
-<style>
+<style scoped>
 @keyframes blink {
   0%, 100% {
     opacity: 0;
