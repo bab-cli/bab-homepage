@@ -15,12 +15,13 @@
           No coding required! Create stunning text tranformator plugins using .bab files.
         </p>
 
-        <div class="mt-8 grid grid-cols-1 gap-6">
+        <div class="mt-8 grid grid-cols-1 grid-rows-2 gap-6">
           <div class="flex items-start space-x-4 bg-[#151923] p-4 rounded-lg">
 
            <span class="select-none text-indigo-600 material-symbols-outlined">
 data_object
 </span>
+
 
             <div>
               <h3 class="text-base font-semibold">Simple Syntax</h3>
@@ -40,7 +41,7 @@ data_object
         </div>
       </div>
 
-      <div class="relative  lg:absolute lg:right-0 lg:top-[15%] lg:bottom-0 lg:w-1/2 xl:pl-20 mt-10 lg:mt-0">
+      <div class="relative max-w-screen overflow-hidden lg:absolute lg:right-0 lg:top-[15%] lg:bottom-0 lg:w-1/2 xl:pl-20 mt-10 lg:mt-0">
           <div class="bg-[#111828] code-editor lg:rounded-none lg:rounded-tl-lg rounded-lg shadow-xl overflow-hidden lg:h-full">
             <div class="bg-gray-800 border-b border-gray-700 flex items-center">
               <div class="px-4 py-3 flex space-x-2">
@@ -48,22 +49,23 @@ data_object
                   <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div class="w-3 h-3 bg-green-500 rounded-full"></div>
               </div>
-              <div class="flex-1">
-                <div class="flex">
-                  <button
-                      v-for="(file, index) in files"
-                      :key="index"
-                      @click="activeTab = index"
-                      :class="[
-                      'px-4 py-2 text-sm font-medium',
+              <div class="flex-1 overflow-scroll no-scrollbar">
+                  <div class="flex flex-row">
+                    <button
+                        v-for="(file, index) in files"
+                        :key="index"
+                        @click="activeTab = index"
+                        :class="[
+                      'px-4 py-2 text-sm font-medium focus:outline-none focus:ring-0',
                       activeTab === index
                         ? 'text-white bg-gray-700'
                         : 'text-gray-400 hover:text-white'
                     ]"
-                  >
-                    {{ file.name }}
-                  </button>
-                </div>
+                    >
+                      {{ file.name }}
+                    </button>
+                  </div>
+
               </div>
 
             </div>
@@ -162,5 +164,14 @@ export default {
 
 .glass-container .text-green-400 {
   color: #32cd32;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 </style>
