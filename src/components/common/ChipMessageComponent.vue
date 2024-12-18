@@ -4,33 +4,10 @@
       class="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4"
   >
     <div
-        class="
-        notification
-        bg-[#4F39F6]
-        px-3.5
-        py-2
-        text-white
-        rounded-lg
-        shadow-lg
-        flex
-        items-center
-        gap-2
-        sm:gap-4
-        max-w-min
-        mx-auto
-        relative
-        animate-slide-up
-      "
+        class="notification bg-[#4F39F6] px-3.5 py-2 text-white rounded-lg shadow-lg flex items-center gap-2 sm:gap-4 max-w-min mx-auto relative animate-slide-up"
     >
       <div class="flex-1 flex items-center gap-2 overflow-hidden">
-        <p class="
-          font-semibold
-          text-xs
-          sm:text-sm
-          whitespace-nowrap
-          overflow-hidden
-          text-ellipsis
-        ">
+        <p class=" font-semibold text-xs sm:text-sm whitespace-nowrap overflow-hidden text-ellipsis">
           {{ title }}
         </p>
         <span class="flex-shrink-0">
@@ -38,28 +15,13 @@
             <circle r="2" cx="6" cy="6" fill="white"></circle>
           </svg>
         </span>
-        <p class="
-          text-xs
-          sm:text-sm
-          overflow-hidden
-          text-ellipsis
-          whitespace-nowrap
-        ">
+        <p class=" text-xs sm:text-sm overflow-hidden text-ellipsis whitespace-nowrap">
           {{ message }}
         </p>
       </div>
       <button
           @click="close"
-          class="
-          text-white
-          font-semibold
-          focus:outline-none
-          top-1/2
-          right-2
-          transition-transform
-          transform
-          hover:scale-110
-        "
+          class=" text-white font-semibold focus:outline-none top-1/2 right-2 transition-transform transform hover:scale-110"
       >
         <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -136,10 +98,6 @@ export default {
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.notification-exit {
-  opacity: 0;
-  transform: translateY(20px);
-}
 
 @keyframes slide-up {
   0% {

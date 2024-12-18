@@ -16,7 +16,7 @@
               class="hidden sm:flex"
               variant="primary"
               href="#installation"
-              :left-icon="DownloadIcon"
+              left-icon="download"
           >
             Install
           </ButtonComponent>
@@ -29,14 +29,12 @@
       </div>
 
       <div class="w-full xl:w-1/2 flex justify-center h-full">
-        <ShowcaseComponent commandsFolder="examples"/>
+        <ShowcaseComponent filename="examples"/>
       </div>
     </section>
 </template>
 
 <script setup>
-import { Download, Info } from 'lucide-vue-next'
-const DownloadIcon = Download
 import ShowcaseComponent from '@/components/modules/ShowcaseComponent.vue'
 import ButtonComponent from "@/components/ui/ButtonComponent.vue";
 import HeroAmbianceComponent from "@/components/decorations/HeroAmbianceComponent.vue";

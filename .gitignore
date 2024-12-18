@@ -25,3 +25,4 @@ dist-ssr
 package-lock.json
 /.vscode
 .env
+src/assets/showcases/main.py

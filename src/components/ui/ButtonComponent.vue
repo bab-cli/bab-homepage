@@ -6,26 +6,15 @@
       variantClasses[variant]
     ]"
   >
-    <component
-        v-if="leftIcon"
-        :is="leftIcon"
-        :size="iconSize"
-        aria-hidden="true"
-        class="shrink-0"
-    />
+    <span v-if="leftIcon" aria-hidden="true" class="material-symbols-outlined h-{{iconSize}} shrink-0">{{ leftIcon }}</span>
+
     <slot />
-    <component
-        v-if="rightIcon"
-        :is="rightIcon"
-        :size="iconSize"
-        aria-hidden="true"
-        class="shrink-0"
-    />
+    <span v-if="rightIcon" aria-hidden="true" class="material-symbols-outlined h-{{iconSize}} shrink-0">{{ rightIcon }}</span>
+
   </a>
 </template>
 
 <script setup>
-import { defineProps } from 'vue'
 
 const props = defineProps({
   href: {
@@ -38,11 +27,11 @@ const props = defineProps({
     validator: (value) => ['primary', 'secondary', 'tertiary'].includes(value)
   },
   leftIcon: {
-    type: [Object, Function],
+    type: String,
     default: null
   },
   rightIcon: {
-    type: [Object, Function],
+    type: String,
     default: null
   },
   iconSize: {

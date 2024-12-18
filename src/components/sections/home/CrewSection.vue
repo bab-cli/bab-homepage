@@ -9,7 +9,7 @@
       <div class="flex justify-center flex-wrap -m-4">
         <div class="p-4 lg:w-1/4 md:w-1/2">
           <div class="h-full flex flex-col items-center text-center">
-            <img alt="team" class="aspect-square h-[12rem] rounded-lg object-cover object-center mb-4" src="@/assets/team/sebastian-stepper.jpeg">
+            <img alt="crew" class="aspect-square h-[12rem] rounded-lg object-cover object-center mb-4" src="@/assets/images/crew/sebastian-stepper.webp">
             <div class="w-full">
               <h2 class="title-font text-lg font-semibold text-gray-100">Sebastian Stepper</h2>
               <h3 class="text-gray-500 mb-2">Developer</h3>

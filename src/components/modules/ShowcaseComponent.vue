@@ -7,7 +7,7 @@
         <div class="w-3 h-3 bg-green-500 rounded-full"></div>
       </div>
       <div class="text-gray-300 text-sm flex items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" height="16" width="16" fill="none" viewBox="0 0 24 24" stroke="white">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
         </svg>
         Examples
