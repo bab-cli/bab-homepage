@@ -2,7 +2,7 @@
 
 
 
-  <div class="text-5xl mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
+  <div class="cursor-default text-5xl mb-4 bg-gradient-to-r from-indigo-500 to-blue-500 bg-clip-text text-transparent">
     {{ props.icon }}
   </div>
   <h3 class="text-xl font-bold mb-2 text-white">{{ props.title }}</h3>

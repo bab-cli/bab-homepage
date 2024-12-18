@@ -10,7 +10,7 @@
     <div
         v-for="feature in features"
         :key="feature.title"
-        class="cursor-default bg-gray-800 bg-opacity-50 p-8 rounded-lg text-center transition-all duration-300 hover:-translate-y-2 border border-gray-700 border-opacity-30"
+        class="bg-gray-800 bg-opacity-50 p-8 rounded-lg text-center border border-gray-700 border-opacity-30"
     >
       <FeatureCardComponent :icon="feature.icon" :title="feature.title" :description="feature.description" />
 
